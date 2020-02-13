@@ -6,14 +6,20 @@ import { AppComponent } from './app.component';
 import { environment} from '../environments/environment';
 import { AngularFireModule} from '@angular/fire';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { ContatosComponent } from './contatos/edit/contatos.component';
+import { ListComponent } from './contatos/list/list.component';
+import { FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContatosComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
